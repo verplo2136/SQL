@@ -36,7 +36,7 @@
  
 Type 1
 
-CREATE TABLE IF NOT EXISTS CustomerAddress (
+--CREATE TABLE IF NOT EXISTS CustomerAddress (
     customer_id INT PRIMARY KEY,
     address VARCHAR(100),
     city VARCHAR(100),
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS CustomerAddress (
 );
 
 Type 2 - no history, overwrite, primary key is cusotmer id, records are not unique per Customer
-CREATE TABLE IF NOT EXISTS CustomerAddress (
+--CREATE TABLE IF NOT EXISTS CustomerAddress (
     customer_id INT PRIMARY KEY,
     address VARCHAR(100),
     city VARCHAR(100),
