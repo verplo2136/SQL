@@ -33,11 +33,40 @@
     - Both Correct (Complete)
     - One Wrong (Incomplete)
     - Both Wrong (Incomplete)
+ 
+Type 1
+
+CREATE TABLE IF NOT EXISTS CustomerAddress (
+    customer_id INT PRIMARY KEY,
+    address VARCHAR(100),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    postal_code VARCHAR(20),
+    country VARCHAR(100),
+    FOREIGN KEY (customer_id) REFERENCES Customer(id)
+);
+
+Type 2 - no history, overwrite, primary key is cusotmer id, records are not unique per Customer
+CREATE TABLE IF NOT EXISTS CustomerAddress (
+    customer_id INT PRIMARY KEY,
+    address VARCHAR(100),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    postal_code VARCHAR(20),
+    country VARCHAR(100),
+    FOREIGN KEY (customer_id) REFERENCES Customer(id)
+);
 
 ## Question 4: 
 - AdventureWorks ERD has been examined**
 - Two interesting differences between participant ERDs and AdventureWorks ERDs highlighted**
 - Student reflection on differences between the ERDs**
+- 
+1. The AdventureWorks ERD contains a rich business domain schema with entities for Production, Person, Sales, Purchasing, etc. In contrast, some participant ERDs might focus only on specific aspects of the business, resulting in a difference in the level of detail and coverage.
+Visual Representation:
+2. AdventureWorks ERD might utilize a more visually appealing and organized layout with colors, symbols, and grouping to enhance readability and understanding. Participant ERDs may vary in terms of visual design, potentially lacking certain visual elements or organization techniques.
+
+These differences underscore the varied approaches to ERD design, highlighting the importance of tailoring the ERD to specific organizational needs and preferences.
 
 ## Criteria
 
